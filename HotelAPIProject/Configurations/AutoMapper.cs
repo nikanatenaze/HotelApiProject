@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using HotelAPIProject.Models;
 
 namespace HotelAPIProject.Configurations
 {
@@ -6,7 +7,9 @@ namespace HotelAPIProject.Configurations
     {
         public AutoMapper()
         {
-            
+            CreateMap<Hotel, HotelDTO>().ReverseMap();
+            CreateMap<Room, RoomDTO>().ReverseMap();
+            CreateMap<Booking, BookingDTO>().ReverseMap();
         }
     }
 }
